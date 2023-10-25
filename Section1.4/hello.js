@@ -12,6 +12,8 @@ const routes = {
     }
 }
 
+
+
 const server = http.createServer(function (request, response) {
     if (request.url in routes) {
         return routes[request.url](request, response)
@@ -26,3 +28,4 @@ const port = process.env.PORT || 8080
 server.listen(port, () => {
     console.log(`Server listening on: localhost${port}`)
 })
+

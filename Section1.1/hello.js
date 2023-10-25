@@ -1,5 +1,6 @@
 const http = require("http")
 
+
 const server = http.createServer((request, response) => {
     response.writeHead(200, {
         "Content-type":"application/json"
@@ -15,10 +16,11 @@ const server = http.createServer((request, response) => {
 
     response.write(userJson) 
 
-    response.end()
+    response.end(" \n Thats all bro, kill the server!!")
 })
 
 const port = process.env.PORT || 8080
-server.listen(PORT, () => {
-    console.log(`PORT STARTED ON: localhost:${PORT}`)
+server.listen(port, () => {
+    console.log(`PORT STARTED ON: localhost:${port}`)
 })
+
